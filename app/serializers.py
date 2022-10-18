@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import student, Owner
+from .models import student, Owner, school
 
 
 class studentserial(serializers.ModelSerializer):
@@ -11,6 +11,18 @@ class studentserial(serializers.ModelSerializer):
             'name', 'age'
         ]
         
+
+class schoolserial(serializers.ModelSerializer):
+    class Meta:
+        model = school 
+        fields = [
+            'id',
+            'name',
+            'description',
+            'country',
+            'state'
+        ]
+                
         
 class UserSerial(serializers.ModelSerializer):
     password = serializers.CharField(write_only = True)
