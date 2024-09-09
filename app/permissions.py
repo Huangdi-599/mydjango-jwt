@@ -16,14 +16,6 @@ class IsStaffPermission(permissions.DjangoModelPermissions):
      
 
          
-    #checking if user is permitted
-    #def has_permission (self, request ,views):
-    #    user =request.user
-    #    if not user.email == "adebayoh76@gmail.com"
-    #       return False
-    #    if  not user.is_staff:
-    #        return False
-    #    return super().has_permission(request, views)
 
 
 
